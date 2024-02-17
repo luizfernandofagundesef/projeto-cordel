@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+/* font-family: "Passion One", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+/* font-family: "Sriracha", cursive; */
+
+:root {
+    /* Cores */
+    --cor1: #ffffff;
+    --cor2: #000000;
+    --cor3: #a9a9a9;
+    --cor4: rgba(0, 0, 0, 0.539);
+
+    /* Fontes */
+    --fonte1: Verdana, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: var(--cor3);
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    text-align: center;
+    font-family: var(--fonte2);
+}
+
+header>h1 {
+    padding-top: 50px;
+
+    /* este "vw" no font-size significa: "view width" */
+    font-size: 10vw;
+
+    /* Esta mantém o uppercase e deixa as primeiras letras da palavra um pouco maiores */
+    font-variant: small-caps;
+
+    /* "text-transform: uppercase;" esta nos permite deixar todas as letras em uppercase */
+}
+
+header>p {
+    padding-bottom: 50px;
+}
+
+header a,
+footer a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10px;
+    font-family: var(--fonte3);
+
+    /* este "vw" no font-size significa: "view width" */
+    font-size: 3vw;
+
+    /* Espaçamento entre as linhas */
+    line-height: 2em
+}
+
+section>p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: var(--cor1);
+    color: var(--cor2);
+}
+
+section.imagem {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    box-shadow: inset 6px 6px 13px 0px var(--cor4);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem>p {
+    background-color: var(--cor4);
+    text-shadow: 1px 1px 0px black;
+    padding: 5px;
+    display: inline-block;
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+}
+
+footer {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    text-align: center;
+    padding: 10px;
+}
